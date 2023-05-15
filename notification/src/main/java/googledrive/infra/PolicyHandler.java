@@ -48,4 +48,19 @@ public class PolicyHandler {
         // Sample Logic //
 
     }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='FileIndexed'"
+    )
+    public void wheneverFileIndexed_NotifyToUser(
+        @Payload FileIndexed fileIndexed
+    ) {
+        FileIndexed event = fileIndexed;
+        System.out.println(
+            "\n\n##### listener NotifyToUser : " + fileIndexed + "\n\n"
+        );
+        // Sample Logic //
+
+    }
 }

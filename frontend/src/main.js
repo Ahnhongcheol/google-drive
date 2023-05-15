@@ -45,7 +45,6 @@ Vue.use(Managing);
 const pluralCaseList = []
 
 
-pluralCaseList.push( {plural: "dashboards", pascal: "Dashboard"} )
 pluralCaseList.push( {plural: "files", pascal: "File"} )
 
 pluralCaseList.push( {plural: "videos", pascal: "Video"} )
